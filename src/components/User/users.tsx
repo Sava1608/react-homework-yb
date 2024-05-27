@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {IUser} from "../../interfaces/userInterface";
 import {userService} from "../../services/user.service";
-import User from "./user";
+import UserOfPosts from "../Additional Comp/UserOfPosts";
 
 const Users = () => {
     const [users, setUsers] = useState<IUser[]>([])
@@ -10,7 +10,7 @@ const Users = () => {
     }, []);
     return (
         <div>
-            {users.map(user => <User key={user.id} user={user}/>)}
+            {users.map(user => <UserOfPosts key={user.id} user={user}/>)}
         </div>
     );
 };
