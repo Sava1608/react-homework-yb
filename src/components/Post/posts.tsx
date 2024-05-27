@@ -1,7 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import {IPost} from "../../interfaces/postInterface";
 import {postService} from "../../services/post.service";
-import Post from "./post";
+
+import PostsAndComments from "../Additional Comp/Posts And Comments/PostsAndComments";
 
 const PostsUser = () => {
     const [posts, setPosts] = useState<IPost[]>([])
@@ -10,7 +11,7 @@ const PostsUser = () => {
     }, []);
     return (
         <div>
-            {posts.map(post=> <Post key={post.id} post={post}/>)}
+            {posts.map(post=> <PostsAndComments key={post.id} post={post}/>)}
         </div>
     );
 };

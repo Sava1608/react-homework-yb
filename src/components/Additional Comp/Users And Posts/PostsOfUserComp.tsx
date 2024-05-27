@@ -1,5 +1,5 @@
 import React, {FC} from 'react';
-import {IPost} from "../../interfaces/postInterface";
+import {IPost} from "../../../interfaces/postInterface";
 import PostsComponent from "./PostsComponent";
 
 interface IProps{

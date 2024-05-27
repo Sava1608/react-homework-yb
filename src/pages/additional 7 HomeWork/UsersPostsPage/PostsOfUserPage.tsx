@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react';
-import PostsOfUserComp from "../../components/Additional Comp/PostsOfUserComp";
+import PostsOfUserComp from "../../../components/Additional Comp/Users And Posts/PostsOfUserComp";
 import {useParams} from "react-router-dom";
-import {IPost} from "../../interfaces/postInterface";
-import {userService} from "../../services/user.service";
+import {IPost} from "../../../interfaces/postInterface";
+import {userService} from "../../../services/user.service";
 
 const PostsOfUserPage = () => {
 

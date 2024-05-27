@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
-import User from "../User/user";
-import {IUser} from "../../interfaces/userInterface";
+import User from "../../User/user";
+import {IUser} from "../../../interfaces/userInterface";
 import {Link} from "react-router-dom";
 
 interface IProps {

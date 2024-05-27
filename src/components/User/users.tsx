@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {IUser} from "../../interfaces/userInterface";
 import {userService} from "../../services/user.service";
-import UserOfPosts from "../Additional Comp/UserOfPosts";
+import UserOfPosts from "../Additional Comp/Users And Posts/UserOfPosts";
 
 const Users = () => {
     const [users, setUsers] = useState<IUser[]>([])

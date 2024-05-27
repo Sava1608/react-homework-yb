@@ -7,6 +7,8 @@ import {AxiosResponse} from "axios";
 
 export const userService = {
     getAll: ():IResponse<IUser[]> => ApiService.get(allURL.users),
+
+    // Це нова функція якщо можна так назвати, вже з додаткового дз
     getPostsOfUsers: (userId:string):Promise<AxiosResponse<IPost[]>> => {
         return ApiService.get(`/users/${userId}/posts`)
     }
