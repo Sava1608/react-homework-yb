@@ -9,12 +9,13 @@ const CarsComponent = () => {
     const [cars, setCars] = useState<ICarWithAuthModel[]>([])
 
     useEffect(() => {
-        // @ts-ignore
-        carService.getCars().then(({data}) => setCars(data))
+
+        carService.getCars().then((value) => value ? setCars(value.items) : [])
     }, []);
     return (
         <div>
-            {cars.map(car => <CarComponent  car={car}/>)}
+            {cars.map(car => <CarComponent key={car.id} car={car}/>)}
+
         </div>
     );
 };

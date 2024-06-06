@@ -11,7 +11,8 @@ const CarComponent:FC<IProps> = ({car}) => {
             <div>Car ID: {id}</div>
             <div>Brand Car: {brand}</div>
             <div>Year Car: {year}</div>
-            <div>Car Price: {price}</div>
+            <div>Car Price: {price}$</div>
+            <br/>
         </div>
     );
 };

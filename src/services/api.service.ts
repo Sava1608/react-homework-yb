@@ -11,8 +11,8 @@ const axiosInstance = axios.create({
 
 axiosInstance.interceptors.request.use(request => {
     if(localStorage.getItem('tokenPair') && (request.url !== '/auth' && request.url !== '/auth/refresh')){
-        const tokenObtain = retriveLocalStorageData<ITokenObtainPair>('tokenPair')
-        request.headers.set('Authorization', 'Bearer' + tokenObtain.access);
+        const iTokenObtainPair = retriveLocalStorageData<ITokenObtainPair>('tokenPair')
+        request.headers.set('Authorization', 'Bearer ' + iTokenObtainPair.access);
     }
     return request;
 })
