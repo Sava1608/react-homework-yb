@@ -5,13 +5,13 @@ interface IProps extends PropsWithChildren{
     car:ICarWithAuthModel;
 }
 const CarComponent:FC<IProps> = ({car}) => {
-    const {id,brand,price,year } = car
+    const {id,brand,year,price} = car
     return (
         <div>
             <div>Car ID: {id}</div>
-            <div>Car Brand: {brand}</div>
+            <div>Brand Car: {brand}</div>
+            <div>Year Car: {year}</div>
             <div>Car Price: {price}</div>
-            <div>Car Year: {year}</div>
         </div>
     );
 };
